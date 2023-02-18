@@ -96,3 +96,11 @@ Add a new feature to the Facilities UI to allow them to set custom ids for Agent
 
 - A new UI field should be added to the Facilities interface to allow entry of custom id for an Agent.
 - Facilities should only be able to set custom ids for Agents they work with.
+
+### Implementation Details:
+
+- Add a new input field to the Facility UI to allow entry of custom ID for an Agent.
+- Modify the Facility UI to ensure that Facilities can only set custom IDs for Agents they work with.
+
+Effort Estimate: 2 hours
+
