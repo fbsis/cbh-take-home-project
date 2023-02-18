@@ -9,3 +9,11 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+- Initial creation of 6 tests, covering all use cases of the function
+- Creation of an abstract function that can be reused for creating a hash (createHash). 
+- I could use TypeScript for this refactoring, using the interface pattern for dependency injection. With this, I could change the createHash function, ensuring that the method signature remains the same, but there wouldn't be enough time for that.
+- Creation of a function to check and handle candidate events (handlerEventCandidate)
+- Creation of a function that can be easily reused for truncating partitions in other places (truncatePartitionKey)
+- Function for stringifying partitions in a way that can be easily reused due to loose but specific parameters in the functions (stringifyPartitionKey)
+- A single function to check the size of candidate data (handlerMaxCandidateLengh)
+- All functions are pure, with the exception of createHash, which requires an external library.
