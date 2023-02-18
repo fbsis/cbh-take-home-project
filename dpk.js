@@ -1,11 +1,8 @@
-const crypto = require("crypto");
 
-const defaultHashAlgorithm = "sha3-512";
-
+const { createHash } = require("./CripytoHash");
+ 
 const TRIVIAL_PARTITION_KEY = "0";
 const MAX_PARTITION_KEY_LENGTH = 256;
-
-const createHash = (data, hash = defaultHashAlgorithm) => crypto.createHash(hash).update(data).digest("hex");
 
 const handlerEventCandidate = (event) => {
   if (event) {
