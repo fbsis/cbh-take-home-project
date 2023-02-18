@@ -30,7 +30,7 @@ Add a new field custom_id to the Agent model to allow Facilities to save their o
 - API should allow CRUD operations on the custom_id field
 - API should ensure uniqueness of custom_id per Facility
 
-Implementation Details:
+### Implementation Details:
 - Add new field to Agent model
 - Write migration to add the new column to the database table
 - Update existing Agent records to set custom_id to null
@@ -47,8 +47,8 @@ Update the getShiftsByFacility function to include the custom id of the Agent as
 
 - The getShiftsByFacility function should return the custom id of the Agent along with the existing metadata.
 - If a custom id has not been set for an Agent, the database id should be returned instead.
-Implementation Details:
 
+### Implementation Details:
 - Update the SQL query in getShiftsByFacility to include custom_id field from Agent model
 - Modify the response of getShiftsByFacility to include the custom_id field for each Shift
 
@@ -80,7 +80,7 @@ Update the API documentation to include details on the new custom_id field.
 - The API documentation should include details on the API endpoints for CRUD operations on custom_id field.
 - The API documentation should explain how custom ids will be used in reports.
 
-Implementation Details:
+### Implementation Details:
 
 - Add details on the custom_id field to the Agent model documentation.
 - Add details on the API endpoints for CRUD operations on custom_id field to API documentation.
